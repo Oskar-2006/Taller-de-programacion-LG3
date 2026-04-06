@@ -17,4 +17,4 @@ const subsidio_transporte="249095";
 const valor_tributario="5237";
 
 //calculo de obligaciones laborales
-let ingeresobase_cotizacion = ;
+let ingeresobase_cotizacion ="";
