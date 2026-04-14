@@ -25,6 +25,13 @@ const solidaridad_pensional= 0.01;
 //resultados
 let cotizacion_ibc = ;
 
+
+//calculos de los datos 
+function calcularPorcentaje (ase, calcularPorcentaje) {
+    let resultados = Base * porcentaje 
+    return resultados ;
+}
+
 //operaciones validacion de perfil
 if (edad<18) {
     //no se pueden calcular las 
