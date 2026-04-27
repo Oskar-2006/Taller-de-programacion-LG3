@@ -1,4 +1,16 @@
-//Oskar Alejandro Bohorquez Vallejo 1032678512
+//pedir info al usuario
+nombre_completo= prompt("Ingrese su nombre completo");
+edad= parseInt(prompt("Ingrese su edad"));
+validarusuario (edadusuario);
+tipo_Documento= prompt("Ingrese su tipo de documento");
+nuemro_Documento= parseInt(prompt("Ingrese su numero de documento"));
+
+//informacion salarial
+salario= parseFloat(prompt("Ingrese su salario"));
+comisiones= parseInt(prompt("Ingrese el valor total de sus comisiones"));
+total_horas= parseInt(prompt("Ingrese el total de horas extras trabajadas en el mes"));
+nivel_riesgo= parseInt(prompt("Ingrese su nivel de riesgo (1-5)"));
+
 
 //Ingreso de informacion basica
 let nombre_completo=""; 
@@ -11,6 +23,7 @@ let salario=0;
 let comisiones=0;
 let total_horas=0;
 let nivel_riesgo=0;
+
 
 //calculo obligaciones laborales
 let calculo_ibc= salario_total * (salario + comisiones + total_horas);
@@ -50,31 +63,25 @@ function calcularPorcentaje (base, porcentaje) {
 }
 
 
-//pedir info al usuario
-nombre_completo= prompt("Ingrese su nombre completo");
-edad= parseInt(prompt("Ingrese su edad"));
-tipo_Documento= prompt("Ingrese su tipo de documento");
-nuemro_Documento= parseInt(prompt("Ingrese su numero de documento"));
-
-//informacion salarial
-salario= parseFloat(prompt("Ingrese su salario"));
-comisiones= parseFloat(prompt("Ingrese el valor total de sus comisiones"));
-total_horas= parseFloat(prompt("Ingrese el total de horas extras trabajadas en el mes"));
-nivel_riesgo= parseInt(prompt("Ingrese su nivel de riesgo (1-5)"));
 
 //validacion de perfil
-if (edad<18) {
-    //no se pueden calcular las 
+
+function validarusuario (edadusuario) { 
+
+    console.log("dentro de la funcion validarusuario");
+    if (edad<18) {
+        alert=("no se pueden calcular las prestaciones de ley, no puede continuar");
+    }
+
+    else if (edad>=18 && edad<=25) {
+        alert=("se clasifica como usuario por cotizante, no puede continuar");
+    }
+
+    else if (edad>=25 && edad<=60) {
+        alert=("Solo se va a calcular el pago de la penseion");
+    }
+
+    edad>=60 ? pension : false ; //Puede continuar con el siguiente proceso
 }
 
-else if (edad>=18 && edad<=25) {
-    //se clasifica como usuario por cotizante, no puede continuar
-}
-
-else if (edad>=25 && edad<=60) {
-    //Solo se va a calcular el pago de la penseion 
-}
-
-edad>=60 ? pension : false ; //Puede continuar con el siguiente proceso
-
-
+//Oskar Alejandro Bohorquez Vallejo 1032678512
