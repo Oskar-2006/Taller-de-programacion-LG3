@@ -1,3 +1,5 @@
+//Oskar Alejandro Bohorquez Vallejo 1032678512
+
 //Ingreso de informacion basica
 let nombre_completo=""; 
 let edad=0;
@@ -12,6 +14,7 @@ let nivel_riesgo=0;
 
 //calculo obligaciones laborales
 let calculo_ibc= salario_total * (salario + comisiones + total_horas);
+let auxilio_transporte= salario_min_legal ? subsidio_transporte : 0;
 let salud_ibc= calculo_ibc * salud;
 let pension_ibc= salud + solidaridad_pensional * calculo_ibc;
 
@@ -36,13 +39,28 @@ const riesgo=[{nombre: "Bajo", valor: 0.522},
 //resultados
 let salario=0;
 let cotizacion_ibc=0;
-let Formula=0;
+let Formula= salario + auxilio_transporte + comisiones + total_horas; 
+let deducibles= salud + pension + solidaridad_pensional + arl + retencion_fuente;
+let total= cotizacion_ibc - deducibles;
 
 //calculos de los datos 
 function calcularPorcentaje (base, porcentaje) {
     let resultados = base * porcentaje 
     return resultados;
 }
+
+
+//pedir info al usuario
+nombre_completo= prompt("Ingrese su nombre completo");
+edad= parseInt(prompt("Ingrese su edad"));
+tipo_Documento= prompt("Ingrese su tipo de documento");
+nuemro_Documento= parseInt(prompt("Ingrese su numero de documento"));
+
+//informacion salarial
+salario= parseFloat(prompt("Ingrese su salario"));
+comisiones= parseFloat(prompt("Ingrese el valor total de sus comisiones"));
+total_horas= parseFloat(prompt("Ingrese el total de horas extras trabajadas en el mes"));
+nivel_riesgo= parseInt(prompt("Ingrese su nivel de riesgo (1-5)"));
 
 //validacion de perfil
 if (edad<18) {
