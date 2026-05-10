@@ -4,9 +4,42 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Título</title>
- <script src="script.js"></script>
  </head>
  <body>
+    <script src="script.js"></script>
 
+      <h1 class="title">
+         Ingrese sus datos
+      </h1>
+
+      <div class="datos_usuario">
+         <form action="getform.php" method="get">
+            <label for="nombre_completo">Nombre completo:
+               <input type="text" id="nombre" name="nombre" required>
+            </label><br>
+            <label for="edad">Edad:
+               <input type="number" id="edad" name="edad" required>
+            </label><br>
+            <label for="tipo_documento">Tipo de documento:
+               <input type="text" id="tipo_documento" name="tipo_documento" required>
+            </label><br>
+            <label for="numero_documento">Número de documento:
+               <input type="text" id="numero_documento" name="numero_documento" required>
+            </label><br>
+            <label for="salario">Salario:
+               <input type="number" id="salario" name="salario" required>
+            </label><br>
+            <label for="comisiones">Comisiones:
+               <input type="number" id="comisiones" name="comisiones" required>
+            </label><br>
+            <label for="horas_extras">Horas extras totales:
+               <input type="number" id="horas_extras" name="horas_extras" required>
+            </label><br>
+            <label for="nivel_riesgo">Nivel de riesgo:
+               <input type="text" id="nivel_riesgo" name="nivel_riesgo" required>
+            </label><br>
+            <input type="submit" value="submit"/>
+         </form>
+      </div>
  </body>
 </html>
