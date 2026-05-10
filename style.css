@@ -1,0 +1,21 @@
+/*Oskar Alejandro Bohorquez Vallejo 1032678512*/
+
+:root{
+    fondo-pantalla: rgb(31, 31, 31);
+    fondo-titulo: rgb(70, 70, 70);
+}
+
+body{
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+}
+
+.title {
+    background-color: rgb(70, 70, 70);
+    padding: 1%;
+}
+.datos_usuario {
+    margin: 0% 1%;
+}
