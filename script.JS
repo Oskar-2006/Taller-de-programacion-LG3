@@ -1,4 +1,5 @@
-//pedir info al usuario
+//Oskar Alejandro Bohorquez Vallejo 1032678512
+//pedir info al usuario 
 nombre_completo= prompt("Ingrese su nombre completo");
 edad= parseInt(prompt("Ingrese su edad"));
 validarusuario (edadusuario);
